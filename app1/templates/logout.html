@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+
+{% block titulo %} login {% endblock %}
+
+{% block contenido %}
+<h1>Te has deslogueado</h1>
+<a class="btn btn-success" href="{% url 'productos' %}">Productos</a>
+
+{% endblock %}

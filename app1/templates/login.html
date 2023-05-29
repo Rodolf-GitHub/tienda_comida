@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block titulo %} login {% endblock %}
+
+{% block contenido %}
+<h1>Esta seccion es solo para los administradores del negocio</h1>
+<h2>escriba sus credenciales de admin</h2>
+<form class="form" method="post">
+{% csrf_token %}
+{{form.as_p}}
+
+<button type="submit" id="submit" class="btn btn-success">Acceder</button>
+
+</form>
+ {% endblock %}

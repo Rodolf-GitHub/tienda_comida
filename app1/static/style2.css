@@ -1,0 +1,51 @@
+body {
+    background-color: rgb(255, 255, 255);
+    background-image: linear-gradient(to bottom right, rgb(255, 255, 255), rgb(3, 155, 147));
+  }
+  
+  div {
+    background-color: rgb(100, 240, 111);
+    font-size: large;
+    border-radius: 10px;
+    box-shadow: 5px 5px rgba(0,0,0,.3);
+  }
+  
+  a {
+    color: rgb(133, 220, 226);
+    text-decoration: none;
+    border: 4px solid black;
+  }
+  
+  a:hover {
+    color: rgb(211, 7, 177);
+    background-color: rgb(158, 3, 119);
+  }
+  
+  .card-header {
+    background-color: rgb(131, 8, 84);
+    color: white;
+    font-size: 24px;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  footer{
+   background-color: rgb(56, 192, 185);
+  }
+  
+  .admin-button {
+   background-color: #4CAF50; /* Green */
+   border: 2px solid #008CBA;
+   border-radius: 12px;
+   box-shadow: 0px 8px 15px rgba(0, 0, 0, .1);
+   color: white;
+   text-align: center;
+   text-decoration: none;
+   display: inline-block;
+   font-size:16px;
+   margin:4px2px;
+   cursor:pointer;
+   position:absolute;
+   right:0;
+  }
+  

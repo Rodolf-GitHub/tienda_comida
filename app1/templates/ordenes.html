@@ -1,0 +1,57 @@
+{% extends "baseAdmin.html" %}
+
+{% block titulo %} lista de ordenes {% endblock %}
+
+{% block contenido %}
+ <div class="card">
+    <div class="card-header">
+        Lista de ordenes
+    </div>
+    <div class="card-body">
+        <h4 class="card-title"> lista de ordenes</h4>
+        <div class="table-responsive">
+            <table class="table table-primary">
+                <thead>
+                    <tr>
+                        <th> producto</th>
+                        <th scope="col">nombre del solicitante</th>
+                        <th scope="col">apellidos</th>
+                        <th scope="col">direccion</th>
+                        <th scope="col">acciones</th>
+                        
+                        
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="">
+                        {% for Orden in ordenes %}
+                    <tr class="">
+                        <td scope="row">{{Orden.Codigo_del_producto.nombre}}</td>
+                        <td scope="row">{{Orden.nombre}}</td>
+                        <td>
+                            {{Orden.apellidos}}
+                        </td>
+                        <td> {{Orden.direccion}}</td>
+                        
+
+                        
+                        <td>
+                            <a name="" id="" class="btn btn-info" href="{% url 'eliminarOrden' Orden.id%}" role="button">Eliminar Orden</a>
+                            
+                            
+                        </td>
+                    </tr>
+                    {% endfor %}
+                    </tr>
+                   
+                </tbody>
+            </table>
+        </div>
+        
+    </div>
+    <div class="card-footer text-muted">
+
+    </div>
+ </div>
+
+ {% endblock %}

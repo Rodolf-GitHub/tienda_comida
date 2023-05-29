@@ -1,0 +1,7 @@
+{% extends "base.html" %} {% block titulo %} Bienvenido {% endblock %}
+
+{% block contenido %}
+<h1>Bienvenido a la pagina de la tienda de comida rapida</h1>
+<h2>vea los productos que tenemos disponibles y realice su orden, en poco tiempo estaremos tocando la puerta de su casa</h2>
+<a class="btn btn-success" href="{% url 'productos' %}">Productos</a>
+{% endblock %}

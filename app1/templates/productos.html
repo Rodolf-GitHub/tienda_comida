@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+
+{% block titulo %} lista de productos {% endblock %}
+
+{% block contenido %}
+ <div class="card">
+    <div class="card-header">
+        Lista de productos
+    </div>
+    <div class="card-body">
+        <h4 class="card-title"> lista de productos</h4>
+        <div class="table-responsive">
+            <table class="table table-primary">
+                <thead>
+                    <tr>
+                        <th>codigo del producto</th>
+                        <th scope="col">nombre</th>
+                        <th scope="col">imagen</th>
+                        <th scope="col">precio $</th>
+                        <th scope="col">descripcion</th>
+                        <th scope="col">acciones</th>
+                        
+                        
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="">
+                        {% for Producto in productos %}
+                    <tr class="">
+                        <td scope="row">{{Producto.id}}</td>
+                        <td scope="row">{{Producto.nombre}}</td>
+                        <td>
+                            <img src="{{Producto.imagen.url}}" height="100"/>
+                            
+                        </td>
+                        <td> {{Producto.precio}}</td>
+                        <td> {{Producto.descripcion}}</td>
+
+                        
+                        <td>
+                            <a name="" id="" class="btn btn-info" href="{% url 'hacerOrden'%}" role="button">Ordenar</a>
+                            
+                            
+                        </td>
+                    </tr>
+                    {% endfor %}
+                    </tr>
+                   
+                </tbody>
+            </table>
+        </div>
+        
+    </div>
+    <div class="card-footer text-muted">
+
+    </div>
+ </div>
+
+ {% endblock %}
